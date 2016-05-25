@@ -1,0 +1,17 @@
+spring.main.sources: com.schlaepfer.health.systemtwo.SystemTwoSpringBootRouter
+shell.auth.simple.user.password: password
+shell.ssh.port: 9061
+server.port: 9060
+
+activemq:
+  brokerurl: tcp://localhost:61616
+  maxConnections: 6
+
+---
+spring:
+  profiles: test
+
+connection:
+  address: chrzmdb1017.eu.hcnet.biz
+  port: 7019
+  

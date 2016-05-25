@@ -1,0 +1,24 @@
+spring.main.sources: com.schlaepfer.health.systemone.SystemOneSpringBootRouter
+shell.auth.simple.user.password: password
+shell.ssh.port: 9001
+server.port: 9000
+
+netty.port: 8887
+netty.hostname: localhost
+
+springws:
+  url.mapping: /triamed-api/*
+  servlet.name: spring-ws
+
+activemq:
+  brokerurl: tcp://localhost:61616
+  maxConnections: 6
+
+---
+spring:
+  profiles: test
+
+connection:
+  address: chrzmdb1017.eu.hcnet.biz
+  port: 7019
+  

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://health.schlaepfer.com/schema" xmlns:ESB="http://health.schlaepfer.com/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://health.schlaepfer.com/schema">
+	<xs:complexType name="Patient">
+		<xs:sequence>
+			<xs:element name="PatientID" type="xs:int" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Vorname" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Geschlecht" type="xs:string" minOccurs="1" maxOccurs="1"/>				
+			<xs:element name="Anrede" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Geburtsdatum" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="GeburtslandRef" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Geburtsort" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="StaatsangehoerigkeitRef" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ZivilstandRef" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Sozialversicherungsnummer" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="EpdId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Beruf" type="xs:string" minOccurs="0" maxOccurs="1"/>						
+		</xs:sequence>
+	</xs:complexType>	
+</xs:schema>
