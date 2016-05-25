@@ -41,7 +41,7 @@ public class HL7ToBoMapperTest {
 
 		Patient patient = patientMapper.PIDToPatient(pid);
 
-		assertThat(patient.getGeschlechtRef()).isEqualTo(EXPECTED_GESCHLECT_REF);
+		assertThat(patient.getGeschlecht()).isEqualTo(EXPECTED_GESCHLECT_REF);
 		assertThat(patient.getName()).isEqualTo(EXPECTED_NAME);
 		assertThat(patient.getVorname()).isEqualTo(EXPECTED_VORNAME);
 		

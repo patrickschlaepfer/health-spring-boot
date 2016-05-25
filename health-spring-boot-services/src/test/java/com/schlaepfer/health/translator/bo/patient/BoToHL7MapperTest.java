@@ -23,7 +23,7 @@ public class BoToHL7MapperTest {
 		Patient patient = new Patient();
 		patient.setVorname("Vorname");
 		patient.setName("Name");
-		patient.setGeschlechtRef("1");
+		patient.setGeschlecht("1");
 		
 		PatientMapper patientMapper = Mappers.getMapper(PatientMapper.class);
 		

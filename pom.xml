@@ -9,6 +9,20 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<url>http://maven.apache.org</url>
 
+	<licenses>
+		<license>
+			<name>Mozilla Public License version 2.0</name>
+			<url>http://mozilla.org/MPL/2.0/</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>scm:git:git://github.com/patrickschlaepfer/health-spring-boot.git</connection>
+		<developerConnection>scm:git:git@github.com:patrickschlaepfer/health-spring-boot.git</developerConnection>
+		<url>git@github.com:patrickschlaepfer/health-spring-boot.git</url>
+	</scm>
+
 	<packaging>pom</packaging>
 	<name>health-spring-boot :: Parent project</name>
 
@@ -243,7 +257,7 @@
 				<version>${maven-site-plugin.version}</version>
 				<configuration>
 					<reportOutputDirectory>C:/tmp/site/myoutput</reportOutputDirectory>
-					<destDir>myapidocs</destDir>					
+					<destDir>myapidocs</destDir>
 				</configuration>
 			</plugin>
 

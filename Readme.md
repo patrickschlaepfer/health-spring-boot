@@ -10,7 +10,7 @@ Yes, even this project needs them.
 * Java 1.8
 * ActiveMQ (http://activemq.apache.org/)
 * git
-* Eclipse - I prefere the STS Version (https://spring.io/tools)
+* Eclipse - I prefer the STS Version (https://spring.io/tools)
 * JBoss Wildfly, if you like to run it within a container
 
 ActiveMQ could be exchanged by RabbitMQ...
@@ -20,6 +20,14 @@ ActiveMQ could be exchanged by RabbitMQ...
 ```
 mvn clean install
 ```
+
+#### How to run?
+
+The project can either be run standalone, so only needs a jre. Or you deploy it into a wildfly container.
+
+### TODO
+
+* Try to include fan-out pattern for the queue using RabbitMQ.
 
 
 ## Add a new module to the project
