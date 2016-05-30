@@ -25,6 +25,27 @@ mvn clean install
 
 The project can either be run standalone, so only needs a jre. Or you deploy it into a wildfly container.
 
+#### RabbitMQ
+
+Installing RabbitMQ Console
+
+```
+C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.2\sbin>rabbitmq-plugins.bat enable rabbitmq_management
+The following plugins have been enabled:
+  mochiweb
+  webmachine
+  rabbitmq_web_dispatch
+  amqp_client
+  rabbitmq_management_agent
+  rabbitmq_management
+
+Applying plugin configuration to rabbit@TC01-BH... started 6 plugins.
+
+C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.2\sbin>
+```
+
+Fresh install user: guest, password: guest
+
 ### TODO
 
 * Try to include fan-out pattern for the queue using RabbitMQ.

@@ -23,7 +23,8 @@ public class DirectRouteBuilder extends SpringRouteBuilder {
 		LOGGER.info("In SAP Direct Route Builder");
 		
 		// @formatter:off 
-		from("activemqhip:queue:in")
+		from("rabbitmq://localhost:5672/in?connectionFactory=#rabbitMQConnectionFactory")
+		// from("activemqhip:queue:in")
 			.routeId(routeId)
 			.log("Got OData: ${body}")
 			.setExchangePattern(ExchangePattern.InOnly)

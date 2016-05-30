@@ -166,6 +166,13 @@
 			<groupId>org.apache.activemq</groupId>
 			<artifactId>activemq-pool</artifactId>
 		</dependency>
+		
+		<!-- RabbitMQ -->
+		<dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-rabbitmq</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
 
 		<!-- Mapper Framework -->
 		<dependency>

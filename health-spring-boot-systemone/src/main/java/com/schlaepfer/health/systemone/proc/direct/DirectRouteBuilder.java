@@ -44,7 +44,9 @@ public class DirectRouteBuilder extends AbstractSystemOneRouteBuilder {
       		.bean(lookup(HL7ToOData.class))
 			.log("after procssing: ${body}")
 			.setExchangePattern(ExchangePattern.InOut)
-			.to("activemqhip:queue:in?replyTo=out&receiveTimeout=250")
+			// .to("rabbitmq://localhost:5672/amq.fanout?connectionFactory=#rabbitMQConnectionFactory")
+			.to("rabbitmq://localhost:5672/in?connectionFactory=#rabbitMQConnectionFactory")
+			// .to("activemqhip:queue:in?replyTo=out&receiveTimeout=250")
 			.bean(lookup(ODataToHL7.class))
       		.bean(lookup(RespondACK.class))
       		.end();
