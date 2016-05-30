@@ -2,6 +2,9 @@
 
 This Version is based on spring boot, including hawtio console access.
 
+Goal of this project is to show different ways of using apache-camel in healthcare environemnt, using HL7 and
+webservice start points. Let's call the design a almost micro-service-approach.
+
 ## Prerequisites
 
 Yes, even this project needs them.
