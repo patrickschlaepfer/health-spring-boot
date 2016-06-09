@@ -10,8 +10,3 @@ activemq:
 ---
 spring:
   profiles: test
-
-connection:
-  address: chrzmdb1017.eu.hcnet.biz
-  port: 7019
-  

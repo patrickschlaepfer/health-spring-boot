@@ -8,10 +8,10 @@ User and password is admin/admin
 
 ## Adapters
 
-| Protocol   | Port |
-|---|---|
+| Protocol   | Port | URL
+|---|---|---
 | MLLP/HL7 | 8887 |
-| Webservice |  
+| Webservice | | http://localhost:9000/systemone-api/increment/increment.wsdl |  
 
 
 ## Deploy to wildfly

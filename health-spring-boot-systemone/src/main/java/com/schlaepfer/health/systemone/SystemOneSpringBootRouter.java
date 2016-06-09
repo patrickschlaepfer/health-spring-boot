@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Import;
 		com.schlaepfer.health.translator.odata.ODataToHL7.class,
 		com.schlaepfer.health.generator.RespondACK.class,
 		com.schlaepfer.health.config.SpringWsContextConfig.class,
-		com.schlaepfer.health.config.ActiveMQContextConfig.class,
 		com.schlaepfer.health.config.RabbitMQContextConfig.class})
 public class SystemOneSpringBootRouter extends FatJarRouter {
 
