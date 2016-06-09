@@ -11,24 +11,12 @@ Yes, even this project needs them.
 
 * maven (https://maven.apache.org/)
 * Java 1.8
-* ActiveMQ (http://activemq.apache.org/)
+* RabbitMQ (https://www.rabbitmq.com/)
 * git
 * Eclipse - I prefer the STS Version (https://spring.io/tools)
 * JBoss Wildfly, if you like to run it within a container
 
-ActiveMQ could be exchanged by RabbitMQ...
-
-### Build the project
-
-```
-mvn clean install
-```
-
-#### How to run?
-
-The project can either be run standalone, so only needs a jre. Or you deploy it into a wildfly container.
-
-#### RabbitMQ
+### RabbitMQ
 
 Installing RabbitMQ Console
 
@@ -48,6 +36,33 @@ C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.2\sbin>
 ```
 
 Fresh install user: guest, password: guest
+
+#### Access RabbitMQ Console
+
+http://localhost:15672/
+
+### Build the project
+
+```
+mvn clean install
+```
+
+### How to run?
+
+The project can either be run standalone, so only needs a jre. Or you deploy it into a wildfly container.
+
+1. Start RabbitMQ Service
+2. Start Each Springboot system
+  1. health-spring-boot-systemone
+    * cd health-spring-boot-systemone
+    * mvn spring-boot:run
+    
+### Modules doing work
+
+* health-spring-boot-systemone
+* health-spring-boot-systemtwo
+* health-spring-boot-sap
+
 
 ### TODO
 

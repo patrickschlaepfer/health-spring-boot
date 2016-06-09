@@ -1,10 +1,17 @@
-# HIP Triamed Route
+# Health Spring Systemone Route
 
-Contains the route for Triamed
+Contains the route for system one
 
 To access via howtio use as Host: localhost, Port 9000 and Path jolokia
 
 User and password is admin/admin
+
+## Adapters
+
+| Protocol   | Port |
+|---|---|
+| MLLP/HL7 | 8887 |
+| Webservice |  
 
 
 ## Deploy to wildfly
