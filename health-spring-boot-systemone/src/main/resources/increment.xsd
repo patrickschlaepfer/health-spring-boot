@@ -14,7 +14,7 @@
     limitations under the License.
 -->
 <schema attributeFormDefault="qualified" elementFormDefault="qualified"
-    targetNamespace="http://ws.eu.hcnet.biz/increment" xmlns="http://www.w3.org/2001/XMLSchema">
+    targetNamespace="http://ws.schlaepfer.com/increment" xmlns="http://www.w3.org/2001/XMLSchema">
     <element name="incrementRequest">
         <complexType>
             <sequence>

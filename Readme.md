@@ -23,6 +23,8 @@ Yes, even this project needs them.
 
 Installing RabbitMQ Console
 
+rabbitmq_management_visualizer
+
 ```
 C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.2\sbin>rabbitmq-plugins.bat enable rabbitmq_management
 The following plugins have been enabled:

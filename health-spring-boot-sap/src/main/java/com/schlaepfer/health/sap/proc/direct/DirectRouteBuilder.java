@@ -28,7 +28,7 @@ public class DirectRouteBuilder extends SpringRouteBuilder {
 			.routeId(routeId)
 			.log("Got OData: ${body}")
 			.removeHeaders("rabbitmq.*")
-			// .setExchangePattern(ExchangePattern.InOnly)
+			.setExchangePattern(ExchangePattern.InOnly)
 			.to("rabbitmq://localhost:5672/adtxx.fanout?exchangeType=fanout&connectionFactory=#rabbitMQConnectionFactory");
 		// @formatter:on
 		

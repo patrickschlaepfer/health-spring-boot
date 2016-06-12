@@ -25,7 +25,7 @@ private static final Logger LOGGER = LoggerFactory.getLogger(SystemTwoDirectRout
 		LOGGER.info("In System Two Direct Route Builder");
 		
 		// @formatter:off 
-		from("rabbitmq://localhost:5672/adtxx.out?queue=adtxx.systemtwo&autoDelete=true&connectionFactory=#rabbitMQConnectionFactory")
+		from("rabbitmq://localhost:5672/adtxx.fanout?exchangeType=fanout&queue=adtxx.systemtwo&connectionFactory=#rabbitMQConnectionFactory")
 			.routeId(routeId1)
 			.log("Got OData: ${body}")
 			.setExchangePattern(ExchangePattern.InOnly)
