@@ -6,6 +6,9 @@ To access via howtio use as Host: localhost, Port 9000 and Path jolokia
 
 User and password is admin/admin
 
+This is a system with two adapters. It will pass internal structured data to a
+kind of SAP System, and waits for the reply.
+
 ## Adapters
 
 | Protocol   | Port | URL

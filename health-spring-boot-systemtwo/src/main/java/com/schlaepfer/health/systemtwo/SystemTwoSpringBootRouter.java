@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Import;
 @SpringBootApplication
 //@ComponentScan("biz.hcnet.eu.hipsringboot.config")
 @Import({ com.schlaepfer.health.translator.odata.HL7ToOData.class,
-	com.schlaepfer.health.config.ActiveMQContextConfig.class })
+	com.schlaepfer.health.config.RabbitMQContextConfig.class})
 public class SystemTwoSpringBootRouter extends FatJarRouter {
 
 }

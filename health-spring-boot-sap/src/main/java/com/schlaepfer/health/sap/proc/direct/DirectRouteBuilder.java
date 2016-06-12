@@ -23,12 +23,13 @@ public class DirectRouteBuilder extends SpringRouteBuilder {
 		LOGGER.info("In SAP Direct Route Builder");
 		
 		// @formatter:off 
-		from("rabbitmq://localhost:5672/in?connectionFactory=#rabbitMQConnectionFactory")
+		from("rabbitmq://localhost:5672/adtxx.in?automaticRecoveryEnabled=true&durable=true&autoDelete=false")
 		// from("activemqhip:queue:in")
 			.routeId(routeId)
 			.log("Got OData: ${body}")
-			.setExchangePattern(ExchangePattern.InOnly)
-			.to("activemqhip:queue:out");
+			.removeHeaders("rabbitmq.*")
+			// .setExchangePattern(ExchangePattern.InOnly)
+			.to("rabbitmq://localhost:5672/adtxx.fanout?exchangeType=fanout&connectionFactory=#rabbitMQConnectionFactory");
 		// @formatter:on
 		
 	}
