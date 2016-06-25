@@ -3,6 +3,7 @@ package com.schlaepfer.health.sap.proc.direct;
 import static com.schlaepfer.health.commons.Routes.id;
 
 import org.apache.camel.ExchangePattern;
+import org.apache.camel.Expression;
 import org.apache.camel.spring.SpringRouteBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +29,7 @@ public class DirectRouteBuilder extends SpringRouteBuilder {
 			.routeId(routeId)
 			.log("Got OData: ${body}")
 			.removeHeaders("rabbitmq.*")
+			.setHeader("rabbitmq.REPLY_TO", simple("amq.rabbitmq.reply-to"))
 			.setExchangePattern(ExchangePattern.InOnly)
 			.to("rabbitmq://localhost:5672/adtxx.fanout?exchangeType=fanout&connectionFactory=#rabbitMQConnectionFactory");
 		// @formatter:on
