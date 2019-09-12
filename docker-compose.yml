@@ -1,0 +1,34 @@
+version: '3.4'
+services:
+  system-one:
+    build: health-spring-boot-systemone/.
+    hostname: system-one
+    container_name: health-spring-boot-systemone
+    networks:
+      - back-tier-health-spring-boot
+  sap:
+    build: health-spring-boot-sap/.
+    hostname: sap
+    container_name: health-spring-boot-sap
+    networks:
+      - back-tier-health-spring-boot
+  rabbitmq:
+    image: rabbitmq:3
+    container_name: rabbitmq
+    hostname: rabbitmq
+    networks:
+      - back-tier-health-spring-boot
+  rabbitmq-management:
+    image: rabbitmq:3-management
+    hostname: rabbitmq-management
+    container_name: rabbitmq-management
+    ports:
+      - "8080:15672"
+    networks:
+      - back-tier-health-spring-boot
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest 
+      - RABBITMQ_DEFAULT_PASS=password
+networks:
+  back-tier-health-spring-boot:
+    driver: bridge
